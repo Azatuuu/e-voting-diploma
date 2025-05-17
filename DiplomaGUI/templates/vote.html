@@ -1,0 +1,99 @@
+<!-- templates/vote.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Electronic voting</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem auto;
+            max-width: 500px;
+            padding: 2rem;
+            background-color: #f5f5f5;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .flash {
+            padding: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid red;
+            background-color: #ffdddd;
+        }
+
+        .flash.success {
+            border-left-color: green;
+            background-color: #ddffdd;
+        }
+
+        label {
+            margin-top: 1rem;
+            display: block;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 0.5rem;
+            margin-top: 0.3rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 0.75rem;
+            margin-top: 1.5rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Voting</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="flash {{ 'success' if category == 'success' else '' }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <form method="post">
+        <label for="token">The token:</label>
+        <input type="text" id="token" name="token" required>
+
+        <label for="vote">Choose a candidate:</label>
+        <select id="vote" name="vote" required>
+            <option value="">-- Choose --</option>
+            <option value="1">Trump</option>
+            <option value="2">Obama</option>
+            <option value="3">Azat</option>
+        </select>
+
+        <button type="submit">Send a voice</button>
+    </form>
+<div class="back" style="text-align: center; margin-top: 1rem;">
+    <a href="{{ url_for('results') }}">📊 View the results</a>
+</div>
+
+</body>
+</html>

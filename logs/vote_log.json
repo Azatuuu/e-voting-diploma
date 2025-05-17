@@ -1,0 +1,62 @@
+[
+  {
+    "token": "xyz789",
+    "timestamp": "2025-05-16T11:02:54",
+    "zkp_passed": true
+  },
+  {
+    "token": "mno456",
+    "timestamp": "2025-05-16T11:03:01",
+    "zkp_passed": true
+  },
+  {
+    "token": "050112550989",
+    "timestamp": "2025-05-16T11:03:12",
+    "zkp_passed": true
+  },
+  {
+    "token": "mno456",
+    "timestamp": "2025-05-16T12:11:57",
+    "zkp_passed": false
+  },
+  {
+    "token": "050112550989",
+    "timestamp": "2025-05-16T12:16:44",
+    "zkp_passed": true
+  },
+  {
+    "token": "xyz789",
+    "timestamp": "2025-05-16T12:17:15",
+    "zkp_passed": true
+  },
+  {
+    "token": "mno456",
+    "timestamp": "2025-05-16T12:54:42",
+    "zkp_passed": true
+  },
+  {
+    "token": "xyz789",
+    "timestamp": "2025-05-16T23:38:06",
+    "zkp_passed": true
+  },
+  {
+    "token": "050112550989",
+    "timestamp": "2025-05-16T23:38:26",
+    "zkp_passed": true
+  },
+  {
+    "token": "050112550989",
+    "timestamp": "2025-05-17T11:33:44",
+    "zkp_passed": true
+  },
+  {
+    "token": "mno456",
+    "timestamp": "2025-05-17T11:33:54",
+    "zkp_passed": true
+  },
+  {
+    "token": "xyz789",
+    "timestamp": "2025-05-17T11:34:53",
+    "zkp_passed": true
+  }
+]
